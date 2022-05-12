@@ -161,3 +161,14 @@ sudoku.c:92:17: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c5cf828
+ju., 12 de may. de 2022 12:09:42: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:92:17: error: comparison between pointer and integer [-Werror]
+     if (n->sudo == true) continue;
+                 ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8e5e2ff
