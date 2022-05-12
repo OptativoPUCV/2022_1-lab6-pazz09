@@ -8,3 +8,37 @@ ju., 12 de may. de 2022 11:20:21:
  tests:  2|4
 total_score: 15/70
 429848c
+ju., 12 de may. de 2022 11:48:17: 
+ sudoku.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:89:10: error: implicit declaration of function 'size' [-Werror=implicit-function-declaration]
+   while (size(S) != 0){
+          ^~~~
+sudoku.c:90:17: error: void value not ignored as it ought to be
+       Node* n = pop(S);
+                 ^~~
+sudoku.c:91:22: error: 'true' undeclared (first use in this function)
+       if (n->sudo == true) continue;
+                      ^~~~
+sudoku.c:91:22: note: each undeclared identifier is reported only once for each function it appears in
+test.c:245:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:262:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:262:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:245:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:7:8: error: '_strdup' defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+36fc5f4

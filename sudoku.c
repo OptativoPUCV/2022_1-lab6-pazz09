@@ -45,7 +45,14 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    return 1;
+
+
+
+
+
+
+
+  return 1;
 }
 
 
@@ -75,7 +82,23 @@ int is_final(Node* n){
     return 0;
 }
 
+
 Node* DFS(Node* initial, int* cont){
+  Stack* S=createStack();
+  push(S,initial);
+  while (size(S) != 0){
+      Node* n = pop(S);
+      if (n->sudo == true) continue;
+    
+      //visitar nodo
+      n->sudo=true;
+      List* adj=get_adj_nodes(n);
+      Node* aux= first(adj);
+      while(aux){
+        push(S,aux);
+        aux=next(adj);
+      }
+
   return NULL;
 }
 
