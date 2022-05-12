@@ -45,12 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-  int x,y,z, k=9,p; 
-  for(p=0;p<9;p++){
-    int i=3*(k/3) + (p/3) ;
-    int j=3*(k%3) + (p%3) ;
-  }
-  return 1;
+  return;
 }
 
 
