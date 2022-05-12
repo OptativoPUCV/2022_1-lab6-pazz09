@@ -87,7 +87,7 @@ Node* DFS(Node* initial, int* cont){
 
   Stack* S=createStack();
   push(S,initial);
-  while (size(S) != 0){
+  while (S != 0){
     Node* n = initial;
     if (n->sudo == true) continue;
     //visitar nodo
