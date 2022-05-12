@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
-
+#include <stdbool.h>
 
 typedef struct{
    int sudo[9][9];
@@ -45,13 +45,11 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-
-
-
-
-
-
-
+  int x,y,z, k=9,p; 
+  for(p=0;p<9;p++){
+    int i=3*(k/3) + (p/3) ;
+    int j=3*(k%3) + (p%3) ;
+  }
   return 1;
 }
 
@@ -79,26 +77,32 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
+
+
+
+
+
+
+
     return 0;
 }
 
 
 Node* DFS(Node* initial, int* cont){
-  /*
+
   Stack* S=createStack();
   push(S,initial);
   while (size(S) != 0){
-      //Node* n = pop(S);
-      if (n->sudo == true) continue;
-      //visitar nodo
-      n->sudo = true;
-      List* adj=get_adj_nodes(n);
-      Node* aux= first(adj);
-      while(aux){
-        push(S,aux);
-        aux=next(adj);
-      }
-  */
+    Node* n = initial;
+    if (n->sudo == true) continue;
+    //visitar nodo
+    List* adj=get_adj_nodes(n);
+    Node* aux= first(adj);
+    while(aux){
+      push(S,aux);
+      aux=next(adj);
+    }
+  }
   return NULL;
 }
 

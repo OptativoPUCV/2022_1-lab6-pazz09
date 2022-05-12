@@ -92,3 +92,33 @@ ju., 12 de may. de 2022 11:58:21:
  tests:  2|4
 total_score: 15/70
 3ab46d4
+ju., 12 de may. de 2022 12:08:32: 
+ sudoku.c | 21 +++++++++------------
+ 1 file changed, 9 insertions(+), 12 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:51:9: error: unused variable 'j' [-Werror=unused-variable]
+     int j=3*(k%3) + (p%3) ;
+         ^
+sudoku.c:50:9: error: unused variable 'i' [-Werror=unused-variable]
+     int i=3*(k/3) + (p/3) ;
+         ^
+sudoku.c:48:11: error: unused variable 'z' [-Werror=unused-variable]
+   int x,y,z, k=9,p;
+           ^
+sudoku.c:48:9: error: unused variable 'y' [-Werror=unused-variable]
+   int x,y,z, k=9,p;
+         ^
+sudoku.c:48:7: error: unused variable 'x' [-Werror=unused-variable]
+   int x,y,z, k=9,p;
+       ^
+sudoku.c: In function 'DFS':
+sudoku.c:95:10: error: implicit declaration of function 'size' [-Werror=implicit-function-declaration]
+   while (size(S) != 0){
+          ^~~~
+sudoku.c:97:17: error: comparison between pointer and integer [-Werror]
+     if (n->sudo == true) continue;
+                 ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2ee95d7
