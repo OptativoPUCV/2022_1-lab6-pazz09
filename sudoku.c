@@ -82,7 +82,7 @@ int is_final(Node* n){
 
   for ( int i = 0 ; i < 9 ; i++){
     for ( int j = 0 ; j < 9 ; j++){
-      printf("%i,%i = %i\n", i, j, n->sudo[i][j]);
+     // printf("%i,%i = %i\n", i, j, n->sudo[i][j]);
       if(n->sudo[i][j] == 0) return 0;
     }
   }
